@@ -5,12 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run build:wasm && npm run build:js",
+    "build:js": "tsc && vite build",
+    "build:wasm": "cd wasm && wasm-pack build",
     "preview": "vite preview"
   },
   "devDependencies": {
     "typescript": "^4.8.4",
     "vite": "^3.2.3",
+    "vite-plugin-top-level-await": "^1.2.1",
     "vite-plugin-wasm": "^3.1.0"
   }
 }

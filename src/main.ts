@@ -1,5 +1,5 @@
 import "./style.css"
-import { Universe } from "../../pkg"
+import { Universe } from "../wasm/pkg"
 
 const pre = document.getElementById("game-of-life-canvas")
 
